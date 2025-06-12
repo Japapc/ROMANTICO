@@ -194,6 +194,12 @@
 </head>
 <body>
 
+  <!-- Música Romântica -->
+  <audio id="romanticMusic" autoplay loop>
+    <source src="https://drive.google.com/uc?id=17H45I4P-fYb5DE8MfAOaezFuo5GdYtCL" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
   <button id="startButton">❤️ Clique ❤️</button>
 
   <div id="photoCard">
@@ -237,6 +243,7 @@
     const hiddenPlayer = document.getElementById('hiddenPlayer');
     const photoCard = document.getElementById('photoCard');
     const videoPlayer = document.getElementById('videoPlayer');
+    const romanticMusic = document.getElementById('romanticMusic');
 
     const dataSurpresa = new Date(2025, 5, 12); // junho é mês 5 (0-based)
 
@@ -290,6 +297,9 @@
         messageCard.style.display = 'none';
         timerCard.style.display = 'none';
         photoCard.style.display = 'none';
+
+        // Parar a música e começar o vídeo
+        romanticMusic.pause();
       }
     }
 
